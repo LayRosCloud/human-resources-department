@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "muZxiCfJTaT8CV7EdRsJSa7JHm5eF8dtJ+SoVbmCwZBxm2GBe7upxZtrTIG7vTji5UjNN61Kuilp1dufBwJF0Q==",
+  "dgSpecHash": "oEI+5smAnX7oosZzXjxdDIm9+JDbVVAu5WIS+vJWgHLHSLNDeX6unR/GZ2MzbhKVRA9x6UgSilTzFaX2Fpe64g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
+  "projectFilePath": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartment\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\betrayal\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\betrayal\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

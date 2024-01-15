@@ -29,6 +29,7 @@ namespace HumanResourcesDepartmentAPI.Scripts.Filters
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
+
         }
     }
 }

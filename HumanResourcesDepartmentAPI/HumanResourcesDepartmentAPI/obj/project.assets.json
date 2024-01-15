@@ -1956,11 +1956,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
+      "projectUniqueName": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartment\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
       "projectName": "HumanResourcesDepartmentAPI",
-      "projectPath": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
+      "projectPath": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartment\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
       "packagesPath": "C:\\Users\\betrayal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\obj\\",
+      "outputPath": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartment\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\betrayal\\AppData\\Roaming\\NuGet\\NuGet.Config",

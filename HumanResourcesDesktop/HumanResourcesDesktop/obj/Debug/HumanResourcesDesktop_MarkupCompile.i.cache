@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\betrayal\source\repos\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\
+C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\
 HumanResourcesDesktop
 none
 false
 DEBUG;TRACE
-C:\Users\betrayal\source\repos\HumanResourcesDesktop\HumanResourcesDesktop\App.xaml
-1219584333
+C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\HumanResourcesDesktop\App.xaml
+8-1704979991
 
-6-502434485
-13-1310406943
-MainWindow.xaml;
+47-557350063
+24-1224965096
+MainWindow.xaml;Pages\AddEditSessionPage.xaml;Pages\AuthPage.xaml;Pages\HubPage.xaml;Pages\MoreInfoPage.xaml;Pages\PeoplePage.xaml;Pages\ProfilePage.xaml;Pages\SessionPage.xaml;
 
 True
 
