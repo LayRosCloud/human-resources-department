@@ -11,7 +11,7 @@ namespace HumanResourcesDesktop.Repositories
 {
     internal class SeparationRepository
     {
-        private string endpoint = "addresses";
+        private string endpoint = "separations";
 
         public async Task<List<SeparationEntity>> FindAll()
         {

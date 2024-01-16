@@ -87,6 +87,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppConnect.cs" />
+    <Compile Include="Pages\AddEditPeoplePage.xaml.cs">
+      <DependentUpon>AddEditPeoplePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AddEditSessionPage.xaml.cs">
       <DependentUpon>AddEditSessionPage.xaml</DependentUpon>
     </Compile>
@@ -130,6 +133,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddEditPeoplePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AddEditSessionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

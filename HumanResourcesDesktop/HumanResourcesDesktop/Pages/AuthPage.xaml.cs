@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HumanResourcesDesktop.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,9 +26,24 @@ namespace HumanResourcesDesktop.Pages
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            AppConnect.Main.Navigate(new HubPage());
+            string password = Password.Password;
+            string login = Login.Text;
+
+            var repository = new PersonRepository();
+            var items =  await repository.FindAll();
+
+            foreach (var item in items)
+            {
+                if (item.login.ToLower().Trim() == login.ToLower().Trim() && item.password == password)
+                {
+                    AppConnect.User = item;
+                    AppConnect.Main.Navigate(new HubPage());
+                    break;
+                }
+            }
+
         }
     }
 }

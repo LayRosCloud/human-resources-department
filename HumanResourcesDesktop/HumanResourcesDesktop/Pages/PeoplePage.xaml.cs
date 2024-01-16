@@ -47,7 +47,7 @@ namespace HumanResourcesDesktop.Pages
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AppConnect.Hub.Navigate(new AddEditPeoplePage());
         }
 
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)

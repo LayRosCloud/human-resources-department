@@ -11,7 +11,7 @@ namespace HumanResourcesDesktop.Repositories
 {
     internal class RoleRepository
     {
-        private string endpoint = "addresses";
+        private string endpoint = "roles";
 
         public async Task<List<RoleEntity>> FindAll()
         {

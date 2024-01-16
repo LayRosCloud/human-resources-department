@@ -6,13 +6,13 @@ namespace HumanResourcesDepartmentAPI.Controllers;
 
 [ApiController]
 [Route("separations")]
-public class SeparationController: ControllerBase, IController<RegionEntity, int>
+public class SeparationController: ControllerBase, IController<SeparationEntity, int>
 {
-    private readonly IService<RegionEntity, int> _service;
+    private readonly IService<SeparationEntity, int> _service;
 
     public SeparationController()
     {
-        _service = new RegionService();
+        _service = new SeparationService();
     }
 
     [HttpGet]
@@ -30,14 +30,14 @@ public class SeparationController: ControllerBase, IController<RegionEntity, int
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] RegionEntity item)
+    public async Task<IActionResult> Create([FromBody] SeparationEntity item)
     {
         var list = await _service.Create(item);
         return Ok(list);
     }
 
     [HttpPut]
-    public async Task<IActionResult> Update([FromBody] RegionEntity item)
+    public async Task<IActionResult> Update([FromBody] SeparationEntity item)
     {
         var list = await _service.Update(item);
         return Ok(list);

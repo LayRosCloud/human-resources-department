@@ -48,3 +48,5 @@ C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\Hu
 C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\Pages\MoreInfoPage.baml
 C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\Pages\AddEditSessionPage.g.cs
 C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\Pages\AddEditSessionPage.baml
+C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\Pages\AddEditPeoplePage.g.cs
+C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\Pages\AddEditPeoplePage.baml

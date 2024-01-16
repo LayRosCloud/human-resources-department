@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HumanResourcesDesktop.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace HumanResourcesDesktop
     {
         public static Frame Main;
         public static Frame Hub;
+        public static PersonEntity User;
         public static string Host = "http://localhost:5125/";
     }
 }

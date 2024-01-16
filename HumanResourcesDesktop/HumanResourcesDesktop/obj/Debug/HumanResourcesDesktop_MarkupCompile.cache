@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\HumanResourcesDesktop\App.xaml
-8-1704979991
+9-675624552
 
-461524738555
+472045194840
 24-1224965096
-MainWindow.xaml;Pages\AddEditSessionPage.xaml;Pages\AuthPage.xaml;Pages\HubPage.xaml;Pages\MoreInfoPage.xaml;Pages\PeoplePage.xaml;Pages\ProfilePage.xaml;Pages\SessionPage.xaml;
+MainWindow.xaml;Pages\AddEditPeoplePage.xaml;Pages\AddEditSessionPage.xaml;Pages\AuthPage.xaml;Pages\HubPage.xaml;Pages\MoreInfoPage.xaml;Pages\PeoplePage.xaml;Pages\ProfilePage.xaml;Pages\SessionPage.xaml;
 
 False
 
