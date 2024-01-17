@@ -34,7 +34,7 @@ namespace HumanResourcesDesktop.Repositories
             return await response.Content.ReadFromJsonAsync<PersonEntity>();
         }
 
-        public async Task<PersonEntity> Update(AddressEntity item)
+        public async Task<PersonEntity> Update(PersonEntity item)
         {
             var client = new HttpClient();
             var response = await client.PutAsJsonAsync(AppConnect.Host + endpoint, item);

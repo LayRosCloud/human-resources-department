@@ -14,14 +14,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace HumanResourcesDesktop.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для SessionPage.xaml
-    /// </summary>
     public partial class SessionPage : Page
     {
+        private List<SessionEntity> list = new List<SessionEntity>();
+
         public SessionPage()
         {
             InitializeComponent();
@@ -56,7 +56,7 @@ namespace HumanResourcesDesktop.Pages
                     }
                 }
             }
-
+            this.list.AddRange(list);
             grid.ItemsSource = list;
         }
 
@@ -86,7 +86,34 @@ namespace HumanResourcesDesktop.Pages
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            Excel.Application app = new Excel.Application();
+            var workbook = app.Workbooks.Add();
+            Excel.Worksheet sheet = app.Worksheets.Add();
 
+            sheet.Name = "Отчет";
+
+            var groupedList = list.GroupBy(x => x.person).ToList();
+            int index = 0;
+            foreach(var keyGrouped in groupedList)
+            {
+                index++;
+                PersonEntity key = keyGrouped.Key;
+                sheet.Cells[index, 1] = key.last_name + " " + key.first_name + " " + key.patronymic;
+                index++;
+                sheet.Cells[index, 1] = "дата начала";
+                sheet.Cells[index, 2] = "дата конца";
+                sheet.Cells[index, 3] = "тип работы";
+                foreach(var item in keyGrouped)
+                {
+                    index++;
+                    sheet.Cells[index, 1] = item.date_start;
+                    sheet.Cells[index, 2] = item.date_end;
+                    sheet.Cells[index, 3] = item.type.name;
+                }
+                index++;
+            }
+
+            app.Visible = true;
         }
 
         private void grid_SelectionChanged(object sender, SelectionChangedEventArgs e)

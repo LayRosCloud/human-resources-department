@@ -25,6 +25,8 @@ namespace HumanResourcesDesktop.Models
 
         [JsonIgnore]
         public string SexName => sex == null ? "Не указан" : sex.Value ? "Мужской" : "Женский";
+
+
     }
 }
 

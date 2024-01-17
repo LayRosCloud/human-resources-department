@@ -36,11 +36,6 @@ namespace HumanResourcesDesktop.Pages
         private PassportRepository passportRepository = new PassportRepository();
 
         public AddEditPeoplePage()
-            : this(new PeoplePage())
-        {
-        }
-
-        public AddEditPeoplePage(PeoplePage people)
         {
             InitializeComponent();
             Init();

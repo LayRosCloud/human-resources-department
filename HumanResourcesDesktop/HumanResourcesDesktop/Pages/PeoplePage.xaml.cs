@@ -50,14 +50,20 @@ namespace HumanResourcesDesktop.Pages
             AppConnect.Hub.Navigate(new AddEditPeoplePage());
         }
 
-        private void DeleteBtn_Click(object sender, RoutedEventArgs e)
+        private async void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if(grid.SelectedItem is PersonEntity person 
+                && MessageBox.Show("Вы уверены, что хотите удалить сотрудника", "Вы уверены?", MessageBoxButton.YesNo, MessageBoxImage.Question)==MessageBoxResult.Yes)
+            {
+                var repository = new PersonRepository();
+                await repository.Delete(person.id);
+            }
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            PersonEntity person = grid.SelectedItem as PersonEntity;
+            AppConnect.Hub.Navigate(new EditPeoplePage(person));
         }
     }
 }

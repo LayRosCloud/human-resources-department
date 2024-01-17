@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\betrayal\source\repos\HumanResourcesDepartment\HumanResourcesDesktop\HumanResourcesDesktop\App.xaml
-9-675624552
+10-1207755970
 
-48-36893778
-24-1224965096
-MainWindow.xaml;Pages\AddEditPeoplePage.xaml;Pages\AddEditSessionPage.xaml;Pages\AuthPage.xaml;Pages\HubPage.xaml;Pages\MoreInfoPage.xaml;Pages\PeoplePage.xaml;Pages\ProfilePage.xaml;Pages\SessionPage.xaml;
+49-2091141780
+27-2043344970
+MainWindow.xaml;Pages\AddEditPeoplePage.xaml;Pages\AddEditSessionPage.xaml;Pages\AuthPage.xaml;Pages\EditPeoplePage.xaml;Pages\HubPage.xaml;Pages\MoreInfoPage.xaml;Pages\PeoplePage.xaml;Pages\ProfilePage.xaml;Pages\SessionPage.xaml;
 
 True
 
