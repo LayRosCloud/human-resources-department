@@ -1,19 +1,9 @@
 ﻿using HumanResourcesDesktop.Models;
 using HumanResourcesDesktop.Repositories;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace HumanResourcesDesktop.Pages
@@ -30,6 +20,7 @@ namespace HumanResourcesDesktop.Pages
 
         private async void Init()
         {
+            this.list.Clear();
             var repository = new SessionRepository();
             var pRepository = new PersonRepository();
             var tRepository = new TypeOfSessionRepository();
@@ -93,24 +84,31 @@ namespace HumanResourcesDesktop.Pages
             sheet.Name = "Отчет";
 
             var groupedList = list.GroupBy(x => x.person).ToList();
-            int index = 0;
+            int rowIndex = 0;
             foreach(var keyGrouped in groupedList)
             {
-                index++;
+                rowIndex++;
+
                 PersonEntity key = keyGrouped.Key;
-                sheet.Cells[index, 1] = key.last_name + " " + key.first_name + " " + key.patronymic;
-                index++;
-                sheet.Cells[index, 1] = "дата начала";
-                sheet.Cells[index, 2] = "дата конца";
-                sheet.Cells[index, 3] = "тип работы";
+
+                sheet.Cells[rowIndex, 1] = key.last_name + " " + key.first_name + " " + key.patronymic;
+
+                rowIndex++;
+
+                sheet.Cells[rowIndex, 1] = "дата начала";
+                sheet.Cells[rowIndex, 2] = "дата конца";
+                sheet.Cells[rowIndex, 3] = "тип работы";
+
                 foreach(var item in keyGrouped)
                 {
-                    index++;
-                    sheet.Cells[index, 1] = item.date_start;
-                    sheet.Cells[index, 2] = item.date_end;
-                    sheet.Cells[index, 3] = item.type.name;
+                    rowIndex++;
+
+                    sheet.Cells[rowIndex, 1] = item.date_start;
+                    sheet.Cells[rowIndex, 2] = item.date_end;
+                    sheet.Cells[rowIndex, 3] = item.type.name;
                 }
-                index++;
+
+                rowIndex++;
             }
 
             app.Visible = true;
@@ -120,6 +118,15 @@ namespace HumanResourcesDesktop.Pages
         {
             EditButton.IsEnabled = true;
             DeleteButton.IsEnabled = true;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string text = Filter.Text.ToLower().Trim();
+            grid.ItemsSource = list.Where(x => x.person.first_name.ToLower().Contains(text) ||
+                                                x.person.last_name.ToLower().Contains(text) ||
+                                                x.person.patronymic.ToLower().Contains(text)
+            );
         }
     }
 }

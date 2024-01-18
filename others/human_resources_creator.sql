@@ -98,7 +98,7 @@ CREATE TABLE `phones`(
     `number` VARCHAR(15) NOT NULL,
     `phone_type_id` INT NOT NULL,
     constraint `phones_to_people`
-    foreign key (`employee_id`) references `people`(`id`),
+    foreign key (`employee_id`) references `people`(`id`) ON DELETE CASCADE,
     constraint `phones_to_types`
     foreign key (`phone_type_id`) references `types_of_phone`(`id`)
 );
@@ -119,7 +119,7 @@ CREATE TABLE `passports`(
     `date` DATE NOT NULL,
     `birthday` DATE NOT NULL,
     constraint `passport_to_people`
-    foreign key (`employee_id`) references `people`(`id`),
+    foreign key (`employee_id`) references `people`(`id`) ON DELETE CASCADE,
     constraint `passport_to_address`
     foreign key (`address_registration_id`) references `addresses`(`id`)
 );
@@ -130,7 +130,7 @@ CREATE TABLE `discipline_bans`(
     `ban` VARCHAR(255) NOT NULL,
     `date` datetime NOT NULL,
     constraint `disciplines_to_people`
-    foreign key (`employee_id`) references `people`(`id`)
+    foreign key (`employee_id`) references `people`(`id`) ON DELETE CASCADE
 );
 
 CREATE TABLE `sessions`(
@@ -140,7 +140,7 @@ CREATE TABLE `sessions`(
     `date_end` datetime NOT NULL,
     `type_of_session_id` int not null,
     constraint `sessions_to_people`
-    foreign key (`employee_id`) references `people`(`id`),
+    foreign key (`employee_id`) references `people`(`id`) ON DELETE CASCADE,
     constraint `type_of_sessions_to_people`
     foreign key (`type_of_session_id`) references `types_of_sessions`(`id`)
 );

@@ -14,9 +14,9 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Button Content="Личная статистика" Click="Button_Click"/>
-            <Button Content="Статистика" Click="Button_Click_1"/>
-            <Button Content="Сотрудники" Click="Button_Click_2"/>
+            <Button x:Name="PersonStatistic" Content="Личная статистика" Click="Button_Click"/>
+            <Button x:Name="Statistic" Content="Статистика" Click="Button_Click_1"/>
+            <Button x:Name="People" Content="Сотрудники" Click="Button_Click_2"/>
         </StackPanel>
 
         <Button VerticalAlignment="Bottom" Content="Выйти" Click="Button_Click_3"/>

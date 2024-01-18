@@ -1,4 +1,5 @@
-﻿using HumanResourcesDesktop.Repositories;
+﻿using HumanResourcesDesktop.Models;
+using HumanResourcesDesktop.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,14 +33,25 @@ namespace HumanResourcesDesktop.Pages
             string login = Login.Text;
 
             var repository = new PersonRepository();
+            var roleRepo = new RoleRepository();
             var items =  await repository.FindAll();
+            var roles = await roleRepo.FindAll();
 
             foreach (var item in items)
             {
                 if (item.login.ToLower().Trim() == login.ToLower().Trim() && item.password == password)
                 {
+                    RoleEntity role = null;
+                    for (int i = 0; i < roles.Count; i++)
+                    {
+                        if (roles[i].id == item.role_id)
+                        {
+                            role = roles[i];
+                            break;
+                        }
+                    }
                     AppConnect.User = item;
-                    AppConnect.Main.Navigate(new HubPage());
+                    AppConnect.Main.Navigate(new HubPage(role));
                     break;
                 }
             }

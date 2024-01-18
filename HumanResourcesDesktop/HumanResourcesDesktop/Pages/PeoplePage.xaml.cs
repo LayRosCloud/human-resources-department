@@ -1,24 +1,16 @@
 ﻿using HumanResourcesDesktop.Models;
 using HumanResourcesDesktop.Repositories;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace HumanResourcesDesktop.Pages
 {
     public partial class PeoplePage : Page
     {
+
+        private List<PersonEntity> persons = new List<PersonEntity>();
         public PeoplePage()
         {
             InitializeComponent();
@@ -27,9 +19,11 @@ namespace HumanResourcesDesktop.Pages
 
         private async void Init()
         {
+            persons.Clear();
             var repository = new PersonRepository();
             var list = await repository.FindAll();
-            grid.ItemsSource = list;
+            persons.AddRange(list);
+            grid.ItemsSource = persons;
         }
 
         private void grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -57,6 +51,7 @@ namespace HumanResourcesDesktop.Pages
             {
                 var repository = new PersonRepository();
                 await repository.Delete(person.id);
+                Init();
             }
         }
 
@@ -64,6 +59,15 @@ namespace HumanResourcesDesktop.Pages
         {
             PersonEntity person = grid.SelectedItem as PersonEntity;
             AppConnect.Hub.Navigate(new EditPeoplePage(person));
+        }
+
+        private void Filter_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string text = Filter.Text.ToLower().Trim();
+            grid.ItemsSource = persons.Where(x => x.first_name.ToLower().Contains(text) ||
+                                                x.last_name.ToLower().Contains(text) ||
+                                                x.patronymic.ToLower().Contains(text)
+            );
         }
     }
 }

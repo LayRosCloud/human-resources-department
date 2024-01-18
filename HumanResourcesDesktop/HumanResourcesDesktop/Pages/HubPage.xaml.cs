@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HumanResourcesDesktop.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,23 @@ namespace HumanResourcesDesktop.Pages
     /// </summary>
     public partial class HubPage : Page
     {
-        public HubPage()
+        public HubPage(RoleEntity role)
         {
             InitializeComponent();
             AppConnect.Hub = FrmHub;
+            FrmHub.Navigate(new ProfilePage());
+            switch (role.name.ToLower())
+            {
+                case "работник":
+                    Statistic.Visibility = Visibility.Collapsed;
+                    People.Visibility = Visibility.Collapsed;
+                    break;
+                case "отдел кадров":
+                    Statistic.Visibility = Visibility.Collapsed;
+                    break;
+                case "директор":
+                    break;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,7 +57,7 @@ namespace HumanResourcesDesktop.Pages
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-
+            AppConnect.Main.Navigate(new AuthPage());
         }
     }
 }

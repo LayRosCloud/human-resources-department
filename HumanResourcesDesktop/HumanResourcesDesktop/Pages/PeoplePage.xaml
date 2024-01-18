@@ -16,7 +16,7 @@
         
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Поиско по ФИО: " VerticalAlignment="Center"/>
-            <TextBox Text="" Width="300"/>
+            <TextBox x:Name="Filter" Text="" Width="300" TextChanged="Filter_TextChanged"/>
             <Button x:Name="AddBtn" Content="Добавить" Click="AddBtn_Click" />
             <Button x:Name="MoreInfo" Content="Подробнее" Click="MoreInfo_Click" IsEnabled="False"/>
             <Button x:Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click" IsEnabled="False"/>

@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Поиск по ФИО: " VerticalAlignment="Center"/>
-            <TextBox Width="200"/>
+            <TextBox x:Name="Filter" Width="200" TextChanged="TextBox_TextChanged"/>
             
             <Button Content="Добавить" Click="Button_Click"/>
             <Button x:Name="EditButton" Content="Редактировать" Click="Button_Click_1" IsEnabled="False"/>
