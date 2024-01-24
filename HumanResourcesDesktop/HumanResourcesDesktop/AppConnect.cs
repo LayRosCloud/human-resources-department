@@ -13,6 +13,6 @@ namespace HumanResourcesDesktop
         public static Frame Main;
         public static Frame Hub;
         public static PersonEntity User;
-        public static string Host = "http://localhost:5125/";
+        public static string Host = "https://localhost:5001/";
     }
 }

@@ -28,8 +28,21 @@ namespace HumanResourcesDesktop.Pages
         private async void Init()
         {
             var repository = new SessionRepository();
-            var list = (await repository.FindAll()).Where(x=>x.employee_id == AppConnect.User.id);
-            CountWorkingNumbers.Text = "Количество сделанных дел: " + list.Where(x=>x.type_of_session_id == 1).Count();
+            var list = (await repository.FindAll()).Where(x => x.employee_id == AppConnect.User.id).ToList();
+
+            var repositoryType = new TypeOfSessionRepository();
+            var type = await repositoryType.FindAll();
+            foreach ( var item in list)
+            {
+                foreach (var r in type)
+                {
+                    if (item.type_of_session_id == r.id)
+                    {
+                        item.type = r;
+                    }
+                }
+            }
+            CountWorkingNumbers.Text = "Количество сделанных дел: " + list.Where(x=>x.type.name.ToLower() == "работа").Count();
             grid.ItemsSource = list;
         }
     }

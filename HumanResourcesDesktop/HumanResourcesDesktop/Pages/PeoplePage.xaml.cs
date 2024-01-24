@@ -22,6 +22,19 @@ namespace HumanResourcesDesktop.Pages
             persons.Clear();
             var repository = new PersonRepository();
             var list = await repository.FindAll();
+
+            var repositoryRole = new RoleRepository();
+            var role = await repositoryRole.FindAll();
+            foreach (var item in list)
+            {
+                foreach (var r in role)
+                {
+                    if (item.role_id == r.id)
+                    {
+                        item.Role = r;
+                    }
+                }
+            }
             persons.AddRange(list);
             grid.ItemsSource = persons;
         }

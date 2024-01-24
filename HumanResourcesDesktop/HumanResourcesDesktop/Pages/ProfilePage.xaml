@@ -22,7 +22,7 @@
                 <DataGridTextColumn Header="ФИО" Binding="{Binding employee_id}"/>
                 <DataGridTextColumn Header="Дата начала" Binding="{Binding date_start}"/>
                 <DataGridTextColumn Header="Дата конца" Binding="{Binding date_end}"/>
-                <DataGridTextColumn Header="Тип работы" Binding="{Binding type_of_session_id}"/>
+                <DataGridTextColumn Header="Тип работы" Binding="{Binding type.name}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

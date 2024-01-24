@@ -1951,19 +1951,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\betrayal\\.nuget\\packages\\": {}
+    "C:\\Users\\мыших\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartment\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
+      "projectUniqueName": "C:\\Users\\мыших\\Desktop\\AndrienkoProject\\human-resources-department\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
       "projectName": "HumanResourcesDepartmentAPI",
-      "projectPath": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartment\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
-      "packagesPath": "C:\\Users\\betrayal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\betrayal\\source\\repos\\HumanResourcesDepartment\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\obj\\",
+      "projectPath": "C:\\Users\\мыших\\Desktop\\AndrienkoProject\\human-resources-department\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI.csproj",
+      "packagesPath": "C:\\Users\\мыших\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\мыших\\Desktop\\AndrienkoProject\\human-resources-department\\HumanResourcesDepartmentAPI\\HumanResourcesDepartmentAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\betrayal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\мыших\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2017,7 +2017,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -31,7 +31,7 @@
                 <DataGridTextColumn Header="Логин" Binding="{Binding login}"/>
                 <DataGridCheckBoxColumn Header="Военообязан" Binding="{Binding millitary_duty}"/>
                 <DataGridTextColumn Header="Пол" Binding="{Binding SexName}"/>
-                <DataGridTextColumn Header="Должность" Binding="{Binding role_id}"/>
+                <DataGridTextColumn Header="Должность" Binding="{Binding Role.name}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

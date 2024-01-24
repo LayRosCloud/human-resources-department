@@ -6,8 +6,8 @@ namespace HumanResourcesDepartmentAPI.Data
     public class DatabaseHelper: DbContext
     {
         private const string UserId = "root";
-        private const string Password = "";
-        private const string DatabaseName = "human_resources_department";
+        private const string Password = "1234567890";
+        private const string DatabaseName = "humanbd";
         private const string Host = "127.0.0.1";
         private const int Port = 3306;
         private readonly string _connectionString = $"User Id={UserId};Password={Password};Host={Host};Database={DatabaseName};port={Port};";
