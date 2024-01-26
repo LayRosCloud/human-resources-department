@@ -108,3 +108,4 @@ C:\Users\мыших\Desktop\AndrienkoProject\human-resources-department\HumanRes
 C:\Users\мыших\Desktop\AndrienkoProject\human-resources-department\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\HumanResourcesDesktop.csproj.CopyComplete
 C:\Users\мыших\Desktop\AndrienkoProject\human-resources-department\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\HumanResourcesDesktop.exe
 C:\Users\мыших\Desktop\AndrienkoProject\human-resources-department\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\HumanResourcesDesktop.pdb
+C:\Users\мыших\Desktop\AndrienkoProject\human-resources-department\HumanResourcesDesktop\HumanResourcesDesktop\obj\Debug\App.baml

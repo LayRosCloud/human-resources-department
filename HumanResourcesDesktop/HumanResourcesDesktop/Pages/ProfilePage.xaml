@@ -10,19 +10,18 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="60"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock x:Name="FIO"/>
-            <TextBlock x:Name="CountWorkingNumbers"/>
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="FIO" Style="{StaticResource Title}"/>
+            <TextBlock x:Name="CountWorkingNumbers" Style="{StaticResource TextBlock}" Opacity="0.5"/>
         </StackPanel>
-        <DataGrid x:Name="grid" Grid.Row="1" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ФИО" Binding="{Binding employee_id}"/>
-                <DataGridTextColumn Header="Дата начала" Binding="{Binding date_start}"/>
-                <DataGridTextColumn Header="Дата конца" Binding="{Binding date_end}"/>
-                <DataGridTextColumn Header="Тип работы" Binding="{Binding type.name}"/>
+        <DataGrid x:Name="grid" Grid.Row="1" AutoGenerateColumns="False" Style="{StaticResource DataGrid}" IsReadOnly="True">
+            <DataGrid.Columns>                
+                <DataGridTextColumn Header="Дата начала" Binding="{Binding date_start, StringFormat={}{0:dd.MM.yyyy}}" Width="*"/>
+                <DataGridTextColumn Header="Дата конца" Binding="{Binding date_end, StringFormat={}{0:dd.MM.yyyy}}" Width="*"/>
+                <DataGridTextColumn Header="Тип работы" Binding="{Binding type.name}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

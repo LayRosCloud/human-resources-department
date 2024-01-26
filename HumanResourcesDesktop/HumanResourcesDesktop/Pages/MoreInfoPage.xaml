@@ -14,7 +14,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="1.5*"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -23,20 +23,20 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
-        <TextBlock Grid.Row="0" Text="Фамилия: "/>
-        <TextBlock Grid.Row="1" Text="Имя: "/>
-        <TextBlock Grid.Row="2" Text="Отчество: "/>
-        <TextBlock Grid.Row="3" Text="Логин: "/>
-        <TextBlock Grid.Row="4" Text="Паспорт: "/>
-        <TextBlock Grid.Row="5" Text="Адрес: "/>
-        <TextBlock Grid.Row="6" Text="Телефоны: "/>
+        <TextBlock Grid.Row="0" Text="Фамилия: " Style="{StaticResource Title}"/>
+        <TextBlock Grid.Row="1" Text="Имя: " Style="{StaticResource Title}"/>
+        <TextBlock Grid.Row="2" Text="Отчество: " Style="{StaticResource Title}"/>
+        <TextBlock Grid.Row="3" Text="Логин: " Style="{StaticResource Title}"/>
+        <TextBlock Grid.Row="4" Text="Паспорт: " Style="{StaticResource Title}"/>
+        <TextBlock Grid.Row="5" Text="Адрес: " Style="{StaticResource Title}"/>
+        <TextBlock Grid.Row="6" Text="Телефоны: " Style="{StaticResource Title}"/>
 
-        <TextBlock x:Name="LastName" Grid.Column="1" Grid.Row="0"/>
-        <TextBlock x:Name="FirstName" Grid.Column="1" Grid.Row="1"/>
-        <TextBlock x:Name="Patronymic" Grid.Column="1" Grid.Row="2"/>
-        <TextBlock x:Name="Login" Grid.Column="1" Grid.Row="3"/>
-        <TextBlock x:Name="Passport" Grid.Column="1" Grid.Row="4"/>
-        <TextBlock x:Name="Address" Grid.Column="1" Grid.Row="5"/>
-        <TextBlock x:Name="Phones" Grid.Column="1" Grid.Row="6"/>
+        <TextBlock x:Name="LastName" Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBlock}" Margin="5"/>
+        <TextBlock x:Name="FirstName" Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBlock}" Margin="5"/>
+        <TextBlock x:Name="Patronymic" Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBlock}" Margin="5"/>
+        <TextBlock x:Name="Login" Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBlock}" Margin="5"/>
+        <TextBlock x:Name="Passport" Grid.Column="1" Grid.Row="4" Style="{StaticResource TextBlock}" Margin="5"/>
+        <TextBlock x:Name="Address" Grid.Column="1" Grid.Row="5" Style="{StaticResource TextBlock}" Margin="5"/>
+        <TextBlock x:Name="Phones" Grid.Column="1" Grid.Row="6" Style="{StaticResource TextBlock}" Margin="5"/>
     </Grid>
 </Page>

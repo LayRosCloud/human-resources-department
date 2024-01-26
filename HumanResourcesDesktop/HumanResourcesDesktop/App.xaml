@@ -4,6 +4,53 @@
              xmlns:local="clr-namespace:HumanResourcesDesktop"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock" x:Key="Title">
+            <Setter Property="FontSize" Value="16pt"/>           
+            <Setter Property="FontFamily" Value="Cambria"/>
+            <Setter Property="Foreground" Value="#16354D"/>
+            <!--Стиль заголовка(титульник)-->
+        </Style>
+
+        <Style TargetType="Button" x:Key="Button">
+            <Setter Property="FontSize" Value="13pt"/>       
+            <Setter Property="FontFamily" Value="Cambria"/>
+            <Setter Property="Background" Value="#E1DCE0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#0C151C"/>
+            <!--Стиль кнопок-->
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TextBlock">
+            <Setter Property="FontSize" Value="15pt"/>
+            <Setter Property="FontFamily" Value="Cambria"/>
+            <Setter Property="Foreground" Value="#16354D"/>
+        </Style>
+        <!--Стиль текста-->
+
+        <Style TargetType="DataGrid" x:Key="DataGrid">
+            <Setter Property="FontFamily" Value="Cambria"/>
+            <Setter Property="FontSize" Value="10pt"/>
+        </Style>
+        <!--Стиль таблиц грида-->
+
+        <Style TargetType="TextBox" x:Key="TextBox">
+            <Setter Property="FontFamily" Value="Cambria"/>
+            <Setter Property="FontSize" Value="10pt"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <!--Стиль ввода текста-->
+
+        <Style TargetType="PasswordBox" x:Key="PasswordBox">
+            <Setter Property="FontFamily" Value="Cambria"/>
+            <Setter Property="FontSize" Value="10pt"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <!--Стиль ввода пароля-->
+
+        <Style TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="Cambria"/>
+            <Setter Property="FontSize" Value="10pt"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
     </Application.Resources>
 </Application>

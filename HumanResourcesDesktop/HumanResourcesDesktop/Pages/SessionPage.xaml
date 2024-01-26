@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HumanResourcesDesktop.Pages"
       mc:Ignorable="d" 
+      Background="#D2D2D4"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SessionPage">
 
@@ -14,22 +15,22 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Поиск по ФИО: " VerticalAlignment="Center"/>
-            <TextBox x:Name="Filter" Width="200" TextChanged="TextBox_TextChanged"/>
-            
-            <Button Content="Добавить" Click="Button_Click"/>
-            <Button x:Name="EditButton" Content="Редактировать" Click="Button_Click_1" IsEnabled="False"/>
-            <Button x:Name="DeleteButton" Content="Удалить" Click="Button_Click_2" IsEnabled="False"/>
-            <Button Content="Excel" Click="Button_Click_3"/>
+            <TextBlock Text="Поиск по ФИО: " VerticalAlignment="Center" Style="{StaticResource Title}"/>
+            <TextBox x:Name="Filter" Width="200" TextChanged="TextBox_TextChanged" Margin=" 0 5"/>
+
+            <Button Content="Добавить" Click="Button_Click" Style="{StaticResource Button}" Margin="10 2 5 2"/>
+            <Button x:Name="EditButton" Content="Редактировать" Click="Button_Click_1" IsEnabled="False" Style="{StaticResource Button}" Margin="0 2"/>
+            <Button x:Name="DeleteButton" Content="Удалить" Click="Button_Click_2" IsEnabled="False" Style="{StaticResource Button}" Margin="5 2"/>
+            <Button Content="Excel" Click="Button_Click_3" Style="{StaticResource Button}" Margin="0 2" Background="LightGreen" Width="61"/>
         </StackPanel>
-        <DataGrid x:Name="grid" Grid.Row="1" AutoGenerateColumns="False" SelectionChanged="grid_SelectionChanged">
+        <DataGrid x:Name="grid" Grid.Row="1" AutoGenerateColumns="False" SelectionChanged="grid_SelectionChanged" Style="{StaticResource DataGrid}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" Binding="{Binding person.last_name}"/>
-                <DataGridTextColumn Header="Имя" Binding="{Binding person.first_name}"/>
-                <DataGridTextColumn Header="Отчество" Binding="{Binding person.patronymic}"/>
-                <DataGridTextColumn Header="Дата начала" Binding="{Binding date_start}"/>
-                <DataGridTextColumn Header="Дата конца" Binding="{Binding date_end}"/>
-                <DataGridTextColumn Header="Тип" Binding="{Binding type.name}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding person.last_name}" Width="*"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding person.first_name}" Width="*"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding person.patronymic}" Width="*"/>
+                <DataGridTextColumn Header="Дата начала" Binding="{Binding date_start, StringFormat={}{0:dd.MM.yyyy}}" Width="*"/>
+                <DataGridTextColumn Header="Дата конца" Binding="{Binding date_end, StringFormat={}{0:dd.MM.yyyy}}" Width="*"/>
+                <DataGridTextColumn Header="Тип" Binding="{Binding type.name}" Width="*"/>
             </DataGrid.Columns> 
         </DataGrid>
     </Grid>
