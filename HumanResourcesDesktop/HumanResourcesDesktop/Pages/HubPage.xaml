@@ -13,13 +13,13 @@
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Background="#16354D" Orientation="Horizontal">
-            <Button x:Name="PersonStatistic" Content="Личная статистика" Click="Button_Click" Style="{StaticResource Button}" Margin="15 7" Width="180"/>
-            <Button x:Name="Statistic" Content="Статистика" Click="Button_Click_1" Style="{StaticResource Button}" Margin="10 7" Width="120"/>
-            <Button x:Name="People" Content="Сотрудники" Click="Button_Click_2" Style="{StaticResource Button}" Margin="10 7" Width="120"/>
+        <StackPanel Background="{StaticResource Red}" Orientation="Horizontal">
+            <Button x:Name="PersonStatistic" Content="Личная статистика" Click="Button_Click" Style="{StaticResource button}" Margin="15 7" Width="180"/>
+            <Button x:Name="Statistic" Content="Статистика" Click="Button_Click_1" Style="{StaticResource button}" Margin="10 7" Width="120"/>
+            <Button x:Name="People" Content="Сотрудники" Click="Button_Click_2" Style="{StaticResource button}" Margin="10 7" Width="120"/>
         </StackPanel>
 
-        <Button HorizontalAlignment="Right" Content="Выйти" Click="Button_Click_3" Margin="10 7" Width="100" Style="{StaticResource Button}"/>
+        <Button HorizontalAlignment="Right" Content="Выйти" Click="Button_Click_3" Margin="10 7" Width="100" Style="{StaticResource button}"/>
 
         <Frame x:Name="FrmHub" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>

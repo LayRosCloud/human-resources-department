@@ -4,7 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HumanResourcesDesktop.Pages"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
+       Background="{StaticResource OrangeLight}"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProfilePage">
 
@@ -14,8 +15,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical">
-            <TextBlock x:Name="FIO" Style="{StaticResource Title}"/>
-            <TextBlock x:Name="CountWorkingNumbers" Style="{StaticResource TextBlock}" Opacity="0.5"/>
+            <TextBlock x:Name="FIO" Style="{StaticResource titleText}"/>
+            <TextBlock x:Name="CountWorkingNumbers" Style="{StaticResource normText}" Opacity="0.5"/>
         </StackPanel>
         <DataGrid x:Name="grid" Grid.Row="1" AutoGenerateColumns="False" Style="{StaticResource DataGrid}" IsReadOnly="True">
             <DataGrid.Columns>                

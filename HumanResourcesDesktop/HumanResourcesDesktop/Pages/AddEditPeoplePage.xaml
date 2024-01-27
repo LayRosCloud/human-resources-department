@@ -5,98 +5,98 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HumanResourcesDesktop.Pages"
       mc:Ignorable="d" 
-      Background="#E4E5EA"
+      Background="{StaticResource White}"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AddEditPeoplePage">
 
     <ScrollViewer>
         <StackPanel Width="400">
             <StackPanel>
-                <TextBlock Text="Адрес сотрудника:" FontWeight="Bold" Style="{StaticResource Title}" HorizontalAlignment="Center"/>
-                <TextBlock Text="Страна:"  Style="{StaticResource Title}"/>
-                <ComboBox x:Name="CountriesAd" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="CountriesAd_SelectionChanged"/>
-                <TextBlock Text="Регион:" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="RegionsAd" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="RegionsAd_SelectionChanged"/>
-                <TextBlock Text="Область:" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="AreaAd" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="AreaAd_SelectionChanged"/>
-                <TextBlock Text="Город:" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="CityAd" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="CityAd_SelectionChanged"/>
-                <TextBlock Text="Улица:" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="StreetAd" DisplayMemberPath="name" SelectedValuePath="id"/>
-                <TextBlock Text="Номер дома:" Style="{StaticResource Title}"/>
-                <TextBox x:Name="HouseNumberAd" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Корпус:" Style="{StaticResource Title}"/>
-                <TextBox x:Name="CorpusAd" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Подъезд:"  Style="{StaticResource Title}"/>
-                <TextBox x:Name="EntranceAd" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Квартира:" Style="{StaticResource Title}"/>
-                <TextBox x:Name="ApartmentAd" Style="{StaticResource TextBox}"/>
+                <TextBlock Text="Адрес сотрудника:" FontWeight="Bold" Style="{StaticResource titleText}" HorizontalAlignment="Center"/>
+                <TextBlock Text="Страна:"  Style="{StaticResource normText}"/>
+                <ComboBox x:Name="CountriesAd" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="CountriesAd_SelectionChanged" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Регион:" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="RegionsAd" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="RegionsAd_SelectionChanged" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Область:" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="AreaAd" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="AreaAd_SelectionChanged" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Город:" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="CityAd" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="CityAd_SelectionChanged" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Улица:" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="StreetAd" DisplayMemberPath="name" SelectedValuePath="id" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Номер дома:" Style="{StaticResource normText}"/>
+                <TextBox x:Name="HouseNumberAd" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Корпус:" Style="{StaticResource normText}"/>
+                <TextBox x:Name="CorpusAd" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Подъезд:"  Style="{StaticResource normText}"/>
+                <TextBox x:Name="EntranceAd" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Квартира:" Style="{StaticResource normText}"/>
+                <TextBox x:Name="ApartmentAd" Style="{StaticResource textbox}"/>
             </StackPanel>
 
             <StackPanel>
                 
-                <TextBlock Text="Паспортные данные:" FontWeight="Bold" Style="{StaticResource Title}" HorizontalAlignment="Center"/>
+                <TextBlock Text="Паспортные данные:" FontWeight="Bold" Style="{StaticResource titleText}" HorizontalAlignment="Center"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.5*"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>                    
-                    <TextBox x:Name="Seria" Style="{StaticResource TextBox}"/>
-                    <TextBox x:Name="Number" Grid.Column="1" Margin="16,0,0,0" Style="{StaticResource TextBox}"/>
+                    <TextBox x:Name="Seria" Style="{StaticResource textbox}"/>
+                    <TextBox x:Name="Number" Grid.Column="1" Margin="16,0,0,0" Style="{StaticResource textbox}"/>
                 </Grid>
-                <TextBlock Text="День рождения" Style="{StaticResource Title}"/>
-                <DatePicker x:Name="BirthDay"/>
-                <TextBlock Text="Дата выдачи" Style="{StaticResource Title}"/>
-                <DatePicker x:Name="Date"/>
-                <TextBlock Text="Подразделение" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="Separation" DisplayMemberPath="name" SelectedValuePath="id"/>
-                <TextBlock Text="Страна" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="CountriesPass" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="CountriesPass_SelectionChanged"/>
-                <TextBlock Text="Регион" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="RegionsPass" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="RegionsPass_SelectionChanged"/>
-                <TextBlock Text="Область" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="AreaPass" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="AreaPass_SelectionChanged"/>
-                <TextBlock Text="Город" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="CityPass" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="CityPass_SelectionChanged"/>
-                <TextBlock Text="Улица" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="StreetPass" DisplayMemberPath="name" SelectedValuePath="id"/>
-                <TextBlock Text="Номер дома" Style="{StaticResource Title}"/>
-                <TextBox x:Name="HouseNumberPass" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Корпус" Style="{StaticResource Title}"/>
-                <TextBox x:Name="CorpusPass" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Подъезд" Style="{StaticResource Title}"/>
-                <TextBox x:Name="EntrancePass" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Номер квартиры" Style="{StaticResource Title}"/>
-                <TextBox x:Name="ApartmentPass" Style="{StaticResource TextBox}"/>
+                <TextBlock Text="День рождения" Style="{StaticResource normText}"/>
+                <DatePicker x:Name="BirthDay" Style="{StaticResource DatePicer}"/>
+                <TextBlock Text="Дата выдачи" Style="{StaticResource normText}"/>
+                <DatePicker x:Name="Date" Style="{StaticResource DatePicer}"/>
+                <TextBlock Text="Подразделение" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="Separation" DisplayMemberPath="name" SelectedValuePath="id" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Страна" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="CountriesPass" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="CountriesPass_SelectionChanged" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Регион" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="RegionsPass" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="RegionsPass_SelectionChanged" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Область" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="AreaPass" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="AreaPass_SelectionChanged" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Город" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="CityPass" DisplayMemberPath="name" SelectedValuePath="id" SelectionChanged="CityPass_SelectionChanged" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Улица" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="StreetPass" DisplayMemberPath="name" SelectedValuePath="id" Style="{StaticResource combobox}"/>
+                <TextBlock Text="Номер дома" Style="{StaticResource normText}"/>
+                <TextBox x:Name="HouseNumberPass" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Корпус" Style="{StaticResource normText}"/>
+                <TextBox x:Name="CorpusPass" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Подъезд" Style="{StaticResource normText}"/>
+                <TextBox x:Name="EntrancePass" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Номер квартиры" Style="{StaticResource normText}"/>
+                <TextBox x:Name="ApartmentPass" Style="{StaticResource textbox}"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1">
-                <TextBlock Text="Личные данные сотрудника:" FontWeight="Bold" Style="{StaticResource Title}" HorizontalAlignment="Center"/>
-                <TextBlock Text="Фамилия" Style="{StaticResource Title}"/>
-                <TextBox x:Name="LastName" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Имя" Style="{StaticResource Title}"/>
-                <TextBox x:Name="FirstName" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Отчество" Style="{StaticResource Title}"/>
-                <TextBox x:Name="Patronymic" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Логин" Style="{StaticResource Title}"/>
-                <TextBox x:Name="Login" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Пароль" Style="{StaticResource Title}"/>
-                <PasswordBox x:Name="Password" Style="{StaticResource PasswordBox}"/>
-                <TextBlock Text="Пол" Style="{StaticResource Title}"/>
-                <CheckBox x:Name="Sex" Content="Женский" Checked="Sex_Checked" Unchecked="Sex_Unchecked"/>
-                <TextBlock Text="Военнообязанный" Style="{StaticResource Title}"/>
-                <CheckBox x:Name="Military" Content="Невоенообязан" Checked="Military_Checked" Unchecked="Military_Unchecked"/>
-                <TextBlock Text="Роль" Style="{StaticResource Title}"/>
-                <ComboBox x:Name="Role" DisplayMemberPath="name" SelectedValuePath="id"/>
+                <TextBlock Text="Личные данные:" FontWeight="Bold" Style="{StaticResource titleText}" HorizontalAlignment="Center"/>
+                <TextBlock Text="Фамилия" Style="{StaticResource  normText}"/>
+                <TextBox x:Name="LastName" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Имя" Style="{StaticResource normText}"/>
+                <TextBox x:Name="FirstName" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Отчество" Style="{StaticResource normText}"/>
+                <TextBox x:Name="Patronymic" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Логин" Style="{StaticResource normText}"/>
+                <TextBox x:Name="Login" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Пароль" Style="{StaticResource normText}"/>
+                <PasswordBox x:Name="Password" Style="{StaticResource text}"/>
+                <TextBlock Text="Пол" Style="{StaticResource normText}"/>
+                <CheckBox x:Name="Sex" Content="Женский" Checked="Sex_Checked" Unchecked="Sex_Unchecked" Style="{StaticResource CheckBox}"/>
+                <TextBlock Text="Военнообязанный" Style="{StaticResource normText}"/>
+                <CheckBox x:Name="Military" Content="Невоенообязан" Checked="Military_Checked" Unchecked="Military_Unchecked" Style="{StaticResource CheckBox}"/>
+                <TextBlock Text="Роль" Style="{StaticResource normText}"/>
+                <ComboBox x:Name="Role" DisplayMemberPath="name" SelectedValuePath="id" Style="{StaticResource combobox}"/>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="1">
-                <TextBlock Text="Телефоны" FontWeight="Bold" Style="{StaticResource Title}" HorizontalAlignment="Center"/>
-                <TextBlock Text="Рабочий"  Style="{StaticResource Title}"/>
-                <TextBox x:Name="WorkPhone" Style="{StaticResource TextBox}"/>
-                <TextBlock Text="Домашний" Style="{StaticResource Title}"/>
-                <TextBox x:Name="HomePhone" Style="{StaticResource TextBox}"/>
+                <TextBlock Text="Телефоны" FontWeight="Bold" Style="{StaticResource titleText}" HorizontalAlignment="Center"/>
+                <TextBlock Text="Рабочий"  Style="{StaticResource normText}"/>
+                <TextBox x:Name="WorkPhone" Style="{StaticResource textbox}"/>
+                <TextBlock Text="Домашний" Style="{StaticResource normText}"/>
+                <TextBox x:Name="HomePhone" Style="{StaticResource textbox}"/>
             </StackPanel>
-            <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Сохранить" Grid.Row="1" Grid.Column="1" Click="Button_Click" Style="{StaticResource Button}"/>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Сохранить" Grid.Row="1" Grid.Column="1" Click="Button_Click" Style="{StaticResource button}"/>
         </StackPanel>
     </ScrollViewer>    
 </Page>

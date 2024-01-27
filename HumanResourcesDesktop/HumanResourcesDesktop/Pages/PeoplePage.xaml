@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HumanResourcesDesktop.Pages"
       mc:Ignorable="d" 
+      Background="{StaticResource OrangeLight}"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PeoplePage">
 
@@ -15,12 +16,12 @@
         </Grid.RowDefinitions>
         
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Поиско по ФИО: " VerticalAlignment="Center" Style="{StaticResource Title}"/>
-            <TextBox x:Name="Filter" Text="" Width="183" TextChanged="Filter_TextChanged" Margin=" 0 5" Style="{StaticResource TextBox}"/>
-            <Button x:Name="MoreInfo" Content="Подробнее" Click="MoreInfo_Click" IsEnabled="False" Style="{StaticResource Button}" Margin="5 2"/>
-            <Button x:Name="AddBtn" Content="Добавить" Click="AddBtn_Click" Style="{StaticResource Button}" Margin="10 2 5 2"/>
-            <Button x:Name="EditBtn" Content="Редактировать" Click="EditBtn_Click" IsEnabled="False" Style="{StaticResource Button}" Margin="5 2"/>
-            <Button x:Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click" IsEnabled="False" Style="{StaticResource Button}" Margin="5 2" Background="#db3b3b"/>
+            <TextBlock Text="Поиско по ФИО: " VerticalAlignment="Center" Style="{StaticResource titleText}" FontSize="15"/>
+            <TextBox x:Name="Filter" Text="" Width="161" TextChanged="Filter_TextChanged" Margin=" 0 5" Style="{StaticResource textbox}"/>
+            <Button x:Name="MoreInfo" Content="Подробнее" Click="MoreInfo_Click" IsEnabled="False" Style="{StaticResource button}" Margin="5 2" Width="130"/>
+            <Button x:Name="AddBtn" Content="Добавить" Click="AddBtn_Click" Style="{StaticResource button}" Margin="10 2 5 2" Width="105"/>
+            <Button x:Name="EditBtn" Content="Редактировать" Click="EditBtn_Click" IsEnabled="False" Style="{StaticResource button}" Margin="5 2" Width="147"/>
+            <Button x:Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click" IsEnabled="False" Style="{StaticResource button}" Margin="5 2" Background="#db3b3b" Width="77"/>
         </StackPanel>
         
         <DataGrid Grid.Row="1" AutoGenerateColumns="False" x:Name="grid" SelectionChanged="grid_SelectionChanged" Style="{StaticResource DataGrid}">

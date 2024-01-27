@@ -4,53 +4,175 @@
              xmlns:local="clr-namespace:HumanResourcesDesktop"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="TextBlock" x:Key="Title">
-            <Setter Property="FontSize" Value="16pt"/>           
-            <Setter Property="FontFamily" Value="Cambria"/>
-            <Setter Property="Foreground" Value="#16354D"/>
-            <!--Стиль заголовка(титульник)-->
+
+        <SolidColorBrush x:Key="Gray" Color="#4D4D4D"/>
+        <SolidColorBrush x:Key="OrangeLight" Color="#FFBF9B"/>
+        <SolidColorBrush x:Key="Red" Color="#B46060"/>
+        <SolidColorBrush x:Key="White" Color="#FFF4E0"/>
+
+        <Style x:Key="titleText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#4D4D4D"/>
         </Style>
 
-        <Style TargetType="Button" x:Key="Button">
-            <Setter Property="FontSize" Value="13pt"/>       
-            <Setter Property="FontFamily" Value="Cambria"/>
-            <Setter Property="Background" Value="#E1DCE0"/>
+
+        <Style x:Key="normText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#4D4D4D"/>
+        </Style>
+
+        <Style x:Key="textbox" TargetType="TextBox">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Margin" Value="10 0 0 0"/>
+            <Setter Property="Foreground" Value="#4D4D4D"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <Style x:Key="DataGrid" TargetType="DataGrid">
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Grid.Column" Value="1"/>            
+            <Setter Property="Foreground" Value="#4D4D4D"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Foreground" Value="#0C151C"/>
-            <!--Стиль кнопок-->
         </Style>
 
-        <Style TargetType="TextBlock" x:Key="TextBlock">
-            <Setter Property="FontSize" Value="15pt"/>
-            <Setter Property="FontFamily" Value="Cambria"/>
-            <Setter Property="Foreground" Value="#16354D"/>
-        </Style>
-        <!--Стиль текста-->
-
-        <Style TargetType="DataGrid" x:Key="DataGrid">
-            <Setter Property="FontFamily" Value="Cambria"/>
-            <Setter Property="FontSize" Value="10pt"/>
-        </Style>
-        <!--Стиль таблиц грида-->
-
-        <Style TargetType="TextBox" x:Key="TextBox">
-            <Setter Property="FontFamily" Value="Cambria"/>
-            <Setter Property="FontSize" Value="10pt"/>
+        <Style x:Key="combobox" TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Foreground" Value="#4D4D4D"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="1"/>
         </Style>
-        <!--Стиль ввода текста-->
 
-        <Style TargetType="PasswordBox" x:Key="PasswordBox">
-            <Setter Property="FontFamily" Value="Cambria"/>
-            <Setter Property="FontSize" Value="10pt"/>
+        <Style x:Key="CheckBox" TargetType="CheckBox">
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Foreground" Value="#4D4D4D"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="1"/>
         </Style>
-        <!--Стиль ввода пароля-->
 
-        <Style TargetType="ComboBox">
-            <Setter Property="FontFamily" Value="Cambria"/>
-            <Setter Property="FontSize" Value="10pt"/>
+        <Style x:Key="DatePicer" TargetType="DatePicker">
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Foreground" Value="#4D4D4D"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <Style x:Key="mainbutton" TargetType="Button">
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="200"/>           
+            <Setter Property="Background" Value="#4D4D4D"/>
+            <Setter Property="Foreground" Value="AntiqueWhite"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="White" Padding="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#4D4D4D"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="#4D4D4D"/>
+                    <Setter Property="Foreground" Value="DimGray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="button" TargetType="Button">
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="0 20 0 0"/>
+            <Setter Property="Background" Value="#4D4D4D"/>
+            <Setter Property="Foreground" Value="AntiqueWhite"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="1" BorderBrush="White" Padding="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#4D4D4D"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="#4D4D4D"/>
+                    <Setter Property="Foreground" Value="DimGray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="navigation" TargetType="Button">
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Margin" Value="20 0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#4D4D4D"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="0" BorderBrush="White" Padding="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#4D4D4D"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="#4D4D4D"/>
+                    <Setter Property="Foreground" Value="DimGray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="text" TargetType="PasswordBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="Foreground" Value="#4D4D4D"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="#4D4D4D"/>
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="Wheat"/>
+                    <Setter Property="Foreground" Value="#4D4D4D"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
     </Application.Resources>
 </Application>

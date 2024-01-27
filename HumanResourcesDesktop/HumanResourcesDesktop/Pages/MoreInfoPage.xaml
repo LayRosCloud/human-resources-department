@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HumanResourcesDesktop.Pages"
       mc:Ignorable="d" 
+      Background="{StaticResource White}"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MoreInfoPage">
 
@@ -19,24 +20,24 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="297*"/>
+            <ColumnDefinition Width="503*"/>
         </Grid.ColumnDefinitions>
-        
-        <TextBlock Grid.Row="0" Text="Фамилия: " Style="{StaticResource Title}"/>
-        <TextBlock Grid.Row="1" Text="Имя: " Style="{StaticResource Title}"/>
-        <TextBlock Grid.Row="2" Text="Отчество: " Style="{StaticResource Title}"/>
-        <TextBlock Grid.Row="3" Text="Логин: " Style="{StaticResource Title}"/>
-        <TextBlock Grid.Row="4" Text="Паспорт: " Style="{StaticResource Title}"/>
-        <TextBlock Grid.Row="5" Text="Адрес: " Style="{StaticResource Title}"/>
-        <TextBlock Grid.Row="6" Text="Телефоны: " Style="{StaticResource Title}"/>
 
-        <TextBlock x:Name="LastName" Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBlock}" Margin="5"/>
-        <TextBlock x:Name="FirstName" Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBlock}" Margin="5"/>
-        <TextBlock x:Name="Patronymic" Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBlock}" Margin="5"/>
-        <TextBlock x:Name="Login" Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBlock}" Margin="5"/>
-        <TextBlock x:Name="Passport" Grid.Column="1" Grid.Row="4" Style="{StaticResource TextBlock}" Margin="5"/>
-        <TextBlock x:Name="Address" Grid.Column="1" Grid.Row="5" Style="{StaticResource TextBlock}" Margin="5"/>
-        <TextBlock x:Name="Phones" Grid.Column="1" Grid.Row="6" Style="{StaticResource TextBlock}" Margin="5"/>
+        <TextBlock Grid.Row="0" Text="Фамилия: " Style="{StaticResource titleText}"/>
+        <TextBlock Grid.Row="1" Text="Имя: " Style="{StaticResource titleText}"/>
+        <TextBlock Grid.Row="2" Text="Отчество: " Style="{StaticResource titleText}"/>
+        <TextBlock Grid.Row="3" Text="Логин: " Style="{StaticResource titleText}"/>
+        <TextBlock Grid.Row="4" Text="Паспорт: " Style="{StaticResource titleText}"/>
+        <TextBlock Grid.Row="5" Text="Адрес: " Style="{StaticResource titleText}"/>
+        <TextBlock Grid.Row="6" Text="Телефоны: " Style="{StaticResource titleText}"/>
+
+        <TextBlock x:Name="LastName" Grid.Column="1" Grid.Row="0" Style="{StaticResource normText}" Margin="5,5,5,5"/>
+        <TextBlock x:Name="FirstName" Grid.Column="1" Grid.Row="1" Style="{StaticResource normText}" Margin="5,5,5,5"/>
+        <TextBlock x:Name="Patronymic" Grid.Column="1" Grid.Row="2" Style="{StaticResource normText}" Margin="5,5,5,5"/>
+        <TextBlock x:Name="Login" Grid.Column="1" Grid.Row="3" Style="{StaticResource normText}" Margin="5,5,5,5"/>
+        <TextBlock x:Name="Passport" Grid.Column="1" Grid.Row="4" Style="{StaticResource normText}" Margin="5,5,5,5"/>
+        <TextBlock x:Name="Address" Grid.Column="1" Grid.Row="5" Style="{StaticResource normText}" Margin="5,5,5,5"/>
+        <TextBlock x:Name="Phones" Grid.Column="1" Grid.Row="6" Style="{StaticResource normText}" Margin="5,5,5,5"/>
     </Grid>
 </Page>
